@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Admin web Templete</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="temp.css"> -->
+
+    <!-- Font Awesome JS -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body onload="myLoader()" style="margin:0;">
+  <div id="preloader">
+    <div id="loader"></div>
+    <div class="text-loader">loading</div>
+  </div>
+
+  <div id="webContent"  style="display:none;" class="animate-web">
+
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+              <img src="image/eagle.png" alt="" id="logo">
+                <h3>Admin Templete</h3>
+
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        <span class="tooltiptext">Dashboard</span>
+                        <span class="text">Dashboard</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chart-bar"></i>
+                        <span class="tooltiptext">chart</span>
+                        <span class="text">chart</span>
+                    </a>
+
+                    <a href="#">
+                        <i class="fas fa-columns"></i>
+                        <span class="tooltiptext">tables</span>
+                        <span class="text">tables</span>
+                    </a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-pencil-alt"></i>
+                        <span class="tooltiptext">forms</span>
+                        <span class="text">forms</span>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-calendar"></i>
+                        <span class="tooltiptext">calendar</span>
+                        <span class="text">calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-comment-dots"></i>
+                        <span class="tooltiptext">chat</span>
+                        <span class="text">chat</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chart-pie"></i>
+                        <span class="tooltiptext">Statistics</span>
+                        <span class="text">Statistics</span>
+                    </a>
+                </li>
+            </ul>
+
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" id="top-navbar">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-justify"></i>
+
+                    </button>
+
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+                    <form class="serche" action="index.html" method="post">
+                      <input type="text" name="search" placeholder="Serche ...">
+                      <i class="fas fa-search"></i>
+
+                    </form>
+
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                              <div class="dropdown">
+
+
+                                <a class="nav-link" href="#" data-toggle="dropdown">
+                                  <span class="counter-red">3</span>
+                                  <i class="far fa-bell"></i>
+                                </a>
+                                <div class="dropdown-menu email">
+                                  <div class="header-menu">
+                                  <i class="far fa-bell"></i>
+                                  <span>notification</span>
+                                  <i class="divider"></i>
+                                  </div>
+                                    <a class="dropdown-item massanger" href="#">
+                                      <div class="notification-header">
+                                        <div class="profile-pic">
+                                          <img src="image/t1.jpg" alt="">
+                                        </div>
+                                        <div class="friend">
+                                          <p>john madson</p>
+                                        </div>
+                                        <div class="action-type">
+                                          <p>commented on your <span>photo</span></p>
+                                        </div>
+                                      </div>
+                                      <div class="notification-time">
+                                          <p>3 mins ago</p>
+                                      </div>
+
+                                    </a>
+                                    <a class="dropdown-item massanger" href="#">
+                                      <div class="notification-header">
+                                        <div class="profile-pic">
+                                          <img src="image/t3.jpg" alt="">
+                                        </div>
+                                        <div class="friend">
+                                          <p>salma tarek</p>
+                                        </div>
+                                        <div class="action-type">
+                                          <p>liked on your <span>post</span></p>
+                                        </div>
+                                      </div>
+                                      <div class="notification-time">
+                                          <p>15 mins ago</p>
+                                      </div>
+
+                                    </a>
+
+                                    <a class="dropdown-item massanger" href="#">
+                                      <div class="notification-header">
+                                        <div class="profile-pic">
+                                          <img src="image/t4.jpg" alt="">
+                                        </div>
+                                        <div class="friend">
+                                          <p>mariam shokry</p>
+                                        </div>
+                                        <div class="action-type">
+                                          <p>liked on your <span>photo</span></p>
+                                        </div>
+                                      </div>
+                                      <div class="notification-time">
+                                          <p>1 hour ago</p>
+                                      </div>
+
+                                    </a>
+
+                                    <i class="divider"></i>
+                                    <a href="#">
+                                      <div class="massager-bottom">
+                                          <div class="bottom-text">
+                                              view all notification
+                                          </div>
+                                          <i class="fas fa-angle-right"></i>
+                                      </div>
+                                      </a>
+                                </div>
+
+
+                            </div>
+                            </li>
+                            <li class="nav-item">
+                            <div class="dropdown">
+                                <a class="nav-link" href="#" data-toggle="dropdown">
+                                  <span class="counter-red">2</span>
+                                  <i class="far fa-paper-plane"></i>
+                                </a>
+
+                                <div class="dropdown-menu email">
+                                  <div class="header-menu">
+                                  <i class="far fa-paper-plane"></i>
+                                  <span>massanger</span>
+                                  <i class="divider"></i>
+                                  </div>
+                                    <a class="dropdown-item massanger" href="#">
+                                      <div class="massager-header">
+                                        <div class="profile-pic">
+                                          <img src="image/t1.jpg" alt="">
+                                        </div>
+                                        <div class="sender">
+                                          <p>john madson</p>
+                                        </div>
+                                        <div class="time">
+                                            <p class="time">3 mins ago</p>
+                                        </div>
+                                      </div>
+                                      <div class="massage">
+                                        <p>Want to create your own customized data generator for your app...</p>
+                                      </div>
+                                    </a>
+                                    <a class="dropdown-item massanger" href="#">
+                                      <div class="massager-header">
+                                        <div class="profile-pic">
+                                          <img src="image/t3.jpg" alt="">
+                                        </div>
+                                        <div class="sender">
+                                          <p>mohamed ali</p>
+                                        </div>
+                                        <div class="time">
+                                            <p class="time">25 mins ago</p>
+                                        </div>
+                                      </div>
+                                      <div class="massage">
+                                        <p>Want to create your own customized data generator for your app...</p>
+                                      </div>
+                                    </a>
+
+                                    <a class="dropdown-item massanger" href="#">
+                                      <div class="massager-header">
+                                        <div class="profile-pic">
+                                          <img src="image/t4.jpg" alt="">
+                                        </div>
+                                        <div class="sender">
+                                          <p>marilyn monroe</p>
+                                        </div>
+                                        <div class="time">
+                                            <p class="time">1 hour ago</p>
+                                        </div>
+                                      </div>
+                                      <div class="massage">
+                                        <p>Want to create your own customized data generator for your app...</p>
+                                      </div>
+                                    </a>
+
+                                    <i class="divider"></i>
+                                    <a href="#">
+                                      <div class="massager-bottom">
+                                          <div class="bottom-text">
+                                              view all massage
+                                          </div>
+                                          <i class="fas fa-angle-right"></i>
+                                      </div>
+                                      </a>
+                                </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                              <div class="dropdown">
+                                <a class="nav-link" href="#" data-toggle="dropdown">
+                                  <img src="image/t1.jpg" alt="">
+                                  <span class="name">ahmed Jamal</span>
+                                </a>
+
+                                <div class="dropdown-menu account">
+                                  <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs"></i>
+                                    <span>setting</span>
+                                  </a>
+                                  <a class="dropdown-item" href="#">
+                                    <i class="far fa-user"></i>
+                                    <span>profile</span>
+                                  </a>
+                                  <a class="dropdown-item" href="#">
+                                    <i class="far fa-envelope"></i>
+                                    <span>massage</span>
+                                  </a>
+                                  <i class="divider"></i>
+                                  <a class="dropdown-item" href="#">
+                                    <i class="fas fa-power-off"></i>
+                                    <span>logout</span></a>
+
+                                </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+            <div class="padding-top">
+
+            </div>
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+
+            <h2>Lorem Ipsum Dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+
+            <h2>Lorem Ipsum Dolor</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div class="line"></div>
+
+            <h3>Lorem Ipsum Dolor</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+
+
+    </div>
+<section>
+  <div id="content">
+
+  </div>
+    </div>
+</section>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar, #content, #logo ,#top-navbar,#tooltips').toggleClass('active');
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>

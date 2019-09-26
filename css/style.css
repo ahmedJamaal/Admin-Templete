@@ -1,0 +1,586 @@
+/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+:root {
+  --main-bg-color: #fafafa;
+  --main-light-color: #00B3AD;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+/* ---------------------------------------------------
+    loader STYLE
+----------------------------------------------------- */
+#preloader {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+
+#loader {
+
+  display: block;
+
+  width: 150px;
+  height: 150px;
+  border: 16px solid #fafafa;
+  border-radius: 50%;
+  border-top: 16px solid #00FFF7;
+  border-bottom: 16px solid #00FFF7;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#preloader .text-loader
+{
+    display: block;
+    position: absolute;
+    font-size:23px;
+    color:#4D4D4D;
+    text-transform: uppercase;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------------------------------------------------
+    navbar STYLE
+----------------------------------------------------- */
+
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.padding-top
+{
+  padding-top: 100px;
+}
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    position: fixed;
+
+    width: calc(100% - 265px);
+}
+.navbar.active {
+width: calc(100% - 108px);
+}
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+i,
+span {
+    display: inline-block;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.animate-web {
+  position: relative;
+  -webkit-animation-name: animateweb;
+  -webkit-animation-duration: 1s;
+  animation-name: animateweb;
+  animation-duration: 1s;
+
+}
+
+@-webkit-keyframes animateweb {
+  from { bottom:-100px; opacity:0 }
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animateweb {
+  from{ bottom:-100px; opacity:0 }
+  to{ bottom:0; opacity:1 }
+}
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #000;
+    color: #fff;
+    transition: all 0.3s;
+    position: fixed;
+    height: 100%;
+    transition: all  0.3s;
+    text-transform: capitalize;
+}
+
+#sidebar.active {
+    min-width: 60px;
+    max-width: 60px;
+    text-align: center;
+}
+
+#sidebar.active .sidebar-header h3,
+#sidebar.active .CTAs {
+    display: none;
+}
+#sidebar.active .sidebar-header h3,
+#sidebar.active .CTAs {
+    display: none;
+}
+#sidebar.active .text {
+    display: none;
+}
+
+
+#sidebar ul a span
+{
+  font-size: 18px;
+}
+#sidebar ul li a {
+    text-align: left;
+}
+
+#sidebar.active ul li a {
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+#sidebar.active ul li a i  {
+
+    display: block;
+    margin-bottom: 5px;
+}
+
+#sidebar.active ul ul a {
+    padding: 10px !important;
+}
+
+#sidebar.active .dropdown-toggle::after {
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #000;
+}
+#sidebar .sidebar-header img {
+  height: auto;
+  width: 150px;
+}
+#sidebar .sidebar-header img.active {
+  height: auto;
+  width: 58px;
+  margin-left: -22px;
+}
+
+#sidebar ul.components {
+    padding: 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: var(--main-light-color);
+    background: #fff;
+}
+
+#sidebar ul li a i , #sidebar ul li a svg{
+    margin-right: 10px;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+  color: var(--main-light-color);
+    background: #fff;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: var(--main-light-color);
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.download {
+    background: #fff;
+    color: var(--main-light-color);
+}
+
+a.article,
+a.article:hover {
+    background:var(--main-light-color) !important;
+    color: #fff !important;
+}
+
+.tooltiptext  {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  text-transform: capitalize;
+  /* Position the tooltip */
+  position: absolute;
+  top: auto;
+   left: 116%;
+  z-index: 999;
+
+
+}
+#sidebar li a far.i  .tooltiptext
+{
+  margin-top: -34px;
+}
+#sidebar .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+#sidebar.active ul li a:hover .tooltiptext {
+  visibility: visible;
+  z-index: 11111;
+  background-color: #000;
+}
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+    padding-left: 260px;
+}
+#content.active{
+    width: 100%;
+    padding-left: 100px;
+
+}
+.navbar .btn-info {
+	background-color: #00B3AD !important;
+	border-color: #00B3AD !important;
+}
+
+.navbar form{
+    position: relative;
+    top: 52%;
+    left: 1%;
+    transition: all 1s;
+    width: 40px;
+    height: 40px;
+    background: #00B3AD;
+    box-sizing: border-box;
+    border: 1px solid #00B3AD;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.navbar input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 37.5px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.navbar form i{
+    box-sizing: border-box;
+    padding: 7px;
+    width: 32.5px;
+    height: 32.5px;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+
+.serche i{
+    box-sizing: border-box;
+    padding: 10px;
+    width: 42.5px;
+    height: 42.5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #00B3AD;
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+form:hover{
+    width: 250px;
+    cursor: pointer;
+}
+
+form:hover input{
+    display: block;
+}
+
+form:hover .fas{
+    background: #00B3AD;
+    color: white;
+}
+
+.nav-item a{
+  position: relative;
+}
+.collapse ul li{
+  padding-right: 15px;
+}
+.counter-red {
+	background-color: #ff3c7e;
+	border-radius: 50px;
+	color: #fff;
+	font-size: 10px;
+	line-height: 1;
+	padding: 3px 5.5px;
+	position: absolute;
+	left: 18px;
+	top: 3px;
+}
+ .account
+{
+  margin-top: -8px;
+}
+.nav-item img
+{
+  width: 2rem;
+  border-radius: 50% !important;
+}
+.nav-item .name
+{
+  font-size: .87rem !important;
+}
+
+.account
+{
+  right: 0px !important;;
+  min-width: 13rem !important;;
+  left: auto;
+}
+
+.dropdown .email
+{
+  min-width: 350px;
+  padding: 0;
+
+}
+.dropdown-menu .divider
+{
+  border-bottom: 1px solid rgba(0,0,0,.0625);
+	height: 1px;
+	overflow: hidden;
+  width: 100%;
+  padding-top: 5px;
+
+}
+
+.header-menu
+{
+  font-size: 0.89em;
+  text-transform: capitalize;
+  padding-top: 10px;
+}
+.header-menu i
+{
+  padding: 5px 15px;
+}
+.dropdown-item .massager-header
+{
+  display: flex;
+  justify-content: space-between;
+  font-size: .87rem !important;
+}
+.dropdown-item .massager-header p
+{
+
+  color: #000 !important;
+}
+.dropdown-item .massage
+{
+  font-size: .67rem !important;
+}
+.dropdown-item .sender p
+{
+  margin-right: 142px;
+  margin-top: 4px;
+
+}
+.dropdown-menu .dropdown-item i ,.dropdown-menu .dropdown-item svg{
+	margin-right: 25px;
+}
+.dropdown .massager-bottom
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-transform: capitalize;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.dropdown .massager-bottom .bottom-text
+{
+  margin-right: 16px;
+}
+
+.dropdown-item .notification-header {
+	display: flex;
+	font-size: 13px;
+	align-items: center;
+  color: #343a40 !important;
+}
+
+
+.dropdown-item .notification-header .profile-pic
+{
+  padding-right: 16px;
+}
+.dropdown-item .notification-header .profile-pic img
+{
+  width: 4rem;
+  border-radius: 50% !important;
+}
+.dropdown-item .notification-header .friend p
+{
+  padding-right: 8px;
+  color: #000;
+  font-weight: bold;
+}
+
+.dropdown-item .notification-header .action-type
+{
+  padding-right: 29px;
+}
+.dropdown-item .notification-header .action-type span
+{
+  color: #000;
+  font-weight: bold;
+  padding: 0 2px;
+}
+
+.dropdown-item .notification-time
+{
+	font-size: 13px;
+	color: #000;
+
+}
+
+
+
+.dropdown-item .notification-time p
+{
+	padding-left: 21%;
+	margin-top: -27px;
+	color: #000;
+}
