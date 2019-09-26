@@ -315,6 +315,7 @@ a.article:hover {
   top: auto;
    left: 116%;
   z-index: 999;
+  margin-top: -30px;
 
 
 }
